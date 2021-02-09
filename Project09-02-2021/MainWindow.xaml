@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="366" Margin="10,45,0,0" VerticalAlignment="Top" Width="525"/>
+        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="366" Margin="10,45,0,0" VerticalAlignment="Top" Width="525"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="259,19,0,0" TextWrapping="Wrap" Text="Wins" VerticalAlignment="Top" Width="38" FontSize="14" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="317,19,0,0" TextWrapping="Wrap" Text="Draws" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="1.649,0.5" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="375,19,0,0" TextWrapping="Wrap" Text="Loses" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="0.965,0.462" FontWeight="Bold"/>
