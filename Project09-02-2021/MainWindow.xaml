@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListBox HorizontalAlignment="Left" Height="366" Margin="10,45,0,0" VerticalAlignment="Top" Width="525"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="259,19,0,0" TextWrapping="Wrap" Text="Wins" VerticalAlignment="Top" Width="38" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="317,19,0,0" TextWrapping="Wrap" Text="Draws" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="1.649,0.5" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="375,19,0,0" TextWrapping="Wrap" Text="Loses" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="0.965,0.462" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="442,19,0,0" TextWrapping="Wrap" Text="GD" VerticalAlignment="Top" Width="42" FontSize="14" RenderTransformOrigin="1.044,0.538" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="484,19,0,0" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top" Width="51" FontSize="14" RenderTransformOrigin="2.386,1.615" TextDecorations="{x:Null}" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="34,4,0,0" TextWrapping="Wrap" Text="Premier League Standings" VerticalAlignment="Top" Width="196" FontSize="16" FontStyle="Italic" TextDecorations="Underline" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="623,10,0,0" TextWrapping="Wrap" Text="Team Info" VerticalAlignment="Top" Width="109" FontSize="22" TextDecorations="Underline"/>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,50,0,0" TextWrapping="Wrap" Text="Year Founded:" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,77,0,0" TextWrapping="Wrap" Text="Club Networth:" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="553,104,0,0" TextWrapping="Wrap" Text="Number of Titles:" VerticalAlignment="Top" Width="116" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,131,0,0" TextWrapping="Wrap" Text="Current Manager:" VerticalAlignment="Top" Width="102" FontWeight="Bold"/>
+        <TextBlock x:Name="YearFoundedTBlock" HorizontalAlignment="Left" Height="22" Margin="674,50,0,0" TextWrapping="Wrap" Text="Year Founded" VerticalAlignment="Top" Width="90"/>
+        <TextBlock x:Name="ClubNetworthTBlock" HorizontalAlignment="Left" Height="22" Margin="674,77,0,0" TextWrapping="Wrap" Text="Networth" VerticalAlignment="Top" Width="90"/>
+        <TextBlock x:Name="NumTitlesTBlock" HorizontalAlignment="Left" Height="22" Margin="674,104,0,0" TextWrapping="Wrap" Text="Number of Titles" VerticalAlignment="Top" Width="90"/>
+        <TextBlock x:Name="ManagerTBlock" HorizontalAlignment="Left" Height="22" Margin="674,131,0,0" TextWrapping="Wrap" Text="Manager" VerticalAlignment="Top" Width="90"/>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="608,176,0,0" TextWrapping="Wrap" Text="Add A Result" VerticalAlignment="Top" Width="140" FontSize="22" TextDecorations="Underline"/>
+        <RadioButton x:Name="WinRButton" Content="Win" HorizontalAlignment="Left" Height="17" Margin="553,216,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
+        <RadioButton x:Name="DrawRButton" Content="Draw" HorizontalAlignment="Left" Height="17" Margin="553,252,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
+        <RadioButton x:Name="LossRButton" Content="Loss" HorizontalAlignment="Left" Height="17" Margin="553,292,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
+        <TextBox x:Name="GDTBox" HorizontalAlignment="Left" Height="54" Margin="657,233,0,0" TextWrapping="Wrap" Text="Goal Diffrence" VerticalAlignment="Top" Width="91" FontSize="18"/>
+        <Button x:Name="AddResultButton" Content="Add Result" HorizontalAlignment="Left" Height="52" Margin="575,336,0,0" VerticalAlignment="Top" Width="189" FontSize="24" FontWeight="Bold"/>
+
     </Grid>
 </Window>
