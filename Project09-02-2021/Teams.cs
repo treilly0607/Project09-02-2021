@@ -10,6 +10,7 @@ namespace Project09_02_2021
     {
         // Properties
         public string Name { get; set; }
+        public int Played { get; set; }
         public int Wins { get; set; }
         public int Draws { get; set; }
         public int Losses { get; set; }
@@ -21,9 +22,10 @@ namespace Project09_02_2021
         public string Manager { get; set; }
 
         // Constructors
-        public Teams(string name, int wins, int draws, int losses, int goalDifference, int points, int yearFounded, int networth, int titles, string manager)
+        public Teams(string name, int played, int wins, int draws, int losses, int goalDifference, int points, int yearFounded, int networth, int titles, string manager)
         {
             Name = name;
+            Played = played;
             Wins = wins;
             Draws = draws;
             Losses = losses;
