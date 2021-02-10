@@ -20,6 +20,7 @@ namespace Project09_02_2021
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Teams> allTeams = new List<Teams>();
         public MainWindow()
         {
             InitializeComponent();
@@ -47,7 +48,32 @@ namespace Project09_02_2021
             Teams t17 = new Teams() { Name = "Burnley", Played = 22, Wins = 6, Draws = 5, Losses = 12, GoalDifference = -13, Points = 23, YearFounded = 1882, Networth = 145, Titles = 0, Manager = "Sean Dyche" };
             Teams t18 = new Teams() { Name = "Fulham", Played = 22, Wins = 2, Draws = 9, Losses = 11, GoalDifference = -14, Points = 15, YearFounded = 1879, Networth = 105, Titles = 0, Manager = "Scott Parker" };
             Teams t19 = new Teams() { Name = "West Brom", Played = 23, Wins = 2, Draws = 6, Losses = 15, GoalDifference = -36, Points = 12, YearFounded = 1878, Networth = 103, Titles = 0, Manager = "Sam Allardyce" };
-            Teams t20 = new Teams() { Name = "sheffield United", Played = 23, Wins = 3, Draws = 2, Losses = 18, GoalDifference = -22, Points = 11, YearFounded = 1889, Networth = 114, Titles = 0, Manager = "Chris Wilder" };   
+            Teams t20 = new Teams() { Name = "sheffield United", Played = 23, Wins = 3, Draws = 2, Losses = 18, GoalDifference = -22, Points = 11, YearFounded = 1889, Networth = 114, Titles = 0, Manager = "Chris Wilder" };
+
+            // Add team Objects to List 
+            allTeams.Add(t1);
+            allTeams.Add(t2);
+            allTeams.Add(t3);
+            allTeams.Add(t4);
+            allTeams.Add(t5);
+            allTeams.Add(t6);
+            allTeams.Add(t7);
+            allTeams.Add(t8);
+            allTeams.Add(t9);
+            allTeams.Add(t10);
+            allTeams.Add(t11);
+            allTeams.Add(t12);
+            allTeams.Add(t13);
+            allTeams.Add(t14);
+            allTeams.Add(t15);
+            allTeams.Add(t16);
+            allTeams.Add(t17);
+            allTeams.Add(t18);
+            allTeams.Add(t19);
+            allTeams.Add(t20);
+
+            // Display the list inside the ListBox
+            ListBox.ItemsSource = allTeams;
         }
     }
 }

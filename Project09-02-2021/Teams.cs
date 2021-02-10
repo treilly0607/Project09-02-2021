@@ -44,7 +44,7 @@ namespace Project09_02_2021
         // ToString method for ListBox
         public override string ToString()
         {
-            return string.Format($"{Name} {Wins} {Draws} {Losses} {GoalDifference} {Points}");
+            return string.Format("{0} {1} {2} {3} {4} {5} {6}", Name, Played, Wins, Draws, Losses, GoalDifference, Points);
         }
     }
 }
