@@ -5,15 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project09_02_2021"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
-        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="366" Margin="10,45,0,0" VerticalAlignment="Top" Width="525"/>
+        Title="Premier League Standings" Height="450" Width="800" Loaded="Window_Loaded">
+
+
+    <Window.Resources>
+        <DataTemplate x:Key="lbxTemplate">
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Name}" Margin="5" Width="165"/>
+                <TextBlock Text="{Binding Played}" Margin="5" Width="50"/>
+                <TextBlock Text="{Binding Wins}" Margin="5"  Width="50"/>
+                <TextBlock Text="{Binding Draws}" Margin="5" Width="50"/>
+                <TextBlock Text="{Binding Losses}" Margin="5" Width="50"/>
+                <TextBlock Text="{Binding GoalDifference}" Margin="5" Width="30"/>
+                <TextBlock Text="{Binding Points}" Margin="5" Foreground="Red"/>
+            </StackPanel>
+            
+        </DataTemplate>
+        
+    </Window.Resources>
+        
+    <Grid Background="LightSkyBlue">
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="259,19,0,0" TextWrapping="Wrap" Text="Wins" VerticalAlignment="Top" Width="38" FontSize="14" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="317,19,0,0" TextWrapping="Wrap" Text="Draws" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="1.649,0.5" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="375,19,0,0" TextWrapping="Wrap" Text="Loses" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="0.965,0.462" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="442,19,0,0" TextWrapping="Wrap" Text="GD" VerticalAlignment="Top" Width="42" FontSize="14" RenderTransformOrigin="1.044,0.538" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="484,19,0,0" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top" Width="51" FontSize="14" RenderTransformOrigin="2.386,1.615" TextDecorations="{x:Null}" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="10,2,0,0" TextWrapping="Wrap" Text="Premier League Standings" VerticalAlignment="Top" Width="196" FontSize="16" FontStyle="Italic" TextDecorations="Underline" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="484,19,0,0" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top" Width="51" FontSize="14" RenderTransformOrigin="2.386,1.615" TextDecorations="{x:Null}" FontWeight="Bold" Foreground="Red"/>
         <TextBlock HorizontalAlignment="Left" Height="35" Margin="623,10,0,0" TextWrapping="Wrap" Text="Team Info" VerticalAlignment="Top" Width="109" FontSize="22" TextDecorations="Underline"/>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,50,0,0" TextWrapping="Wrap" Text="Year Founded:" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,77,0,0" TextWrapping="Wrap" Text="Club Networth:" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
@@ -30,6 +47,7 @@
         <TextBox x:Name="GDTBox" HorizontalAlignment="Left" Height="54" Margin="657,233,0,0" TextWrapping="Wrap" Text="Goal Diffrence" VerticalAlignment="Top" Width="91" FontSize="18"/>
         <Button x:Name="AddResultButton" Content="Add Result" HorizontalAlignment="Left" Height="52" Margin="575,336,0,0" VerticalAlignment="Top" Width="189" FontSize="24" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="211,19,0,0" TextWrapping="Wrap" Text="PL" VerticalAlignment="Top" Width="26" FontSize="14" FontWeight="Bold"/>
+        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="338" Margin="23,50,0,0" VerticalAlignment="Top" Width="512" ItemTemplate="{StaticResource lbxTemplate}"/>
 
     </Grid>
 </Window>
