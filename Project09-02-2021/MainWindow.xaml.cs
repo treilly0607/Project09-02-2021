@@ -75,5 +75,19 @@ namespace Project09_02_2021
             // Display the list inside the ListBox
             ListBox.ItemsSource = allTeams;
         }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)  //Update the club details when selection changed
+        {
+            Teams SelectedTeam = ListBox.SelectedItem as Teams;
+
+            if (SelectedTeam != null)
+            {
+                // change the details
+                YearFoundedTBlock.Text = Convert.ToString(SelectedTeam.YearFounded);
+                ClubNetworthTBlock.Text = Convert.ToString(SelectedTeam.Networth);
+                NumTitlesTBlock.Text = Convert.ToString(SelectedTeam.Titles);
+                ManagerTBlock.Text = SelectedTeam.Manager;
+            }
+        }
     }
 }

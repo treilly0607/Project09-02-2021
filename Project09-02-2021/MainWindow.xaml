@@ -47,7 +47,7 @@
         <TextBox x:Name="GDTBox" HorizontalAlignment="Left" Height="54" Margin="657,233,0,0" TextWrapping="Wrap" Text="Goal Diffrence" VerticalAlignment="Top" Width="91" FontSize="18"/>
         <Button x:Name="AddResultButton" Content="Add Result" HorizontalAlignment="Left" Height="52" Margin="575,336,0,0" VerticalAlignment="Top" Width="189" FontSize="24" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="211,19,0,0" TextWrapping="Wrap" Text="PL" VerticalAlignment="Top" Width="26" FontSize="14" FontWeight="Bold"/>
-        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="338" Margin="23,50,0,0" VerticalAlignment="Top" Width="512" ItemTemplate="{StaticResource lbxTemplate}"/>
+        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="338" Margin="23,50,0,0" VerticalAlignment="Top" Width="512" ItemTemplate="{StaticResource lbxTemplate}" SelectionChanged="ListBox_SelectionChanged"/>
 
     </Grid>
 </Window>
