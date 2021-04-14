@@ -20,34 +20,61 @@
                 <TextBlock Text="{Binding GoalDifference}" Margin="5" Width="30"/>
                 <TextBlock Text="{Binding Points}" Margin="5" Foreground="Red"/>
             </StackPanel>
-            
-        </DataTemplate>
-        
-    </Window.Resources>
-        
-    <Grid Background="LightSkyBlue">
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="259,19,0,0" TextWrapping="Wrap" Text="Wins" VerticalAlignment="Top" Width="38" FontSize="14" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="317,19,0,0" TextWrapping="Wrap" Text="Draws" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="1.649,0.5" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="375,19,0,0" TextWrapping="Wrap" Text="Loses" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="0.965,0.462" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="442,19,0,0" TextWrapping="Wrap" Text="GD" VerticalAlignment="Top" Width="42" FontSize="14" RenderTransformOrigin="1.044,0.538" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="484,19,0,0" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top" Width="51" FontSize="14" RenderTransformOrigin="2.386,1.615" TextDecorations="{x:Null}" FontWeight="Bold" Foreground="Red"/>
-        <TextBlock HorizontalAlignment="Left" Height="35" Margin="623,10,0,0" TextWrapping="Wrap" Text="Team Info" VerticalAlignment="Top" Width="109" FontSize="22" TextDecorations="Underline"/>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,50,0,0" TextWrapping="Wrap" Text="Year Founded:" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,77,0,0" TextWrapping="Wrap" Text="Club Networth:" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="553,104,0,0" TextWrapping="Wrap" Text="Number of Titles:" VerticalAlignment="Top" Width="116" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,131,0,0" TextWrapping="Wrap" Text="Current Manager:" VerticalAlignment="Top" Width="102" FontWeight="Bold"/>
-        <TextBlock x:Name="YearFoundedTBlock" HorizontalAlignment="Left" Height="22" Margin="674,50,0,0" TextWrapping="Wrap" Text="Year Founded" VerticalAlignment="Top" Width="90"/>
-        <TextBlock x:Name="ClubNetworthTBlock" HorizontalAlignment="Left" Height="22" Margin="674,77,0,0" TextWrapping="Wrap" Text="Networth" VerticalAlignment="Top" Width="90"/>
-        <TextBlock x:Name="NumTitlesTBlock" HorizontalAlignment="Left" Height="22" Margin="674,104,0,0" TextWrapping="Wrap" Text="Number of Titles" VerticalAlignment="Top" Width="90"/>
-        <TextBlock x:Name="ManagerTBlock" HorizontalAlignment="Left" Height="22" Margin="674,131,0,0" TextWrapping="Wrap" Text="Manager" VerticalAlignment="Top" Width="90"/>
-        <TextBlock HorizontalAlignment="Left" Height="35" Margin="608,176,0,0" TextWrapping="Wrap" Text="Add A Result" VerticalAlignment="Top" Width="140" FontSize="22" TextDecorations="Underline"/>
-        <RadioButton x:Name="WinRButton" Content="Win" HorizontalAlignment="Left" Height="17" Margin="553,216,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
-        <RadioButton x:Name="DrawRButton" Content="Draw" HorizontalAlignment="Left" Height="17" Margin="553,252,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
-        <RadioButton x:Name="LossRButton" Content="Loss" HorizontalAlignment="Left" Height="17" Margin="553,292,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
-        <TextBox x:Name="GDTBox" HorizontalAlignment="Left" Height="54" Margin="657,233,0,0" TextWrapping="Wrap" Text="Goal Diffrence" VerticalAlignment="Top" Width="91" FontSize="18"/>
-        <Button x:Name="AddResultButton" Content="Add Result" HorizontalAlignment="Left" Height="52" Margin="575,336,0,0" VerticalAlignment="Top" Width="189" FontSize="24" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="211,19,0,0" TextWrapping="Wrap" Text="PL" VerticalAlignment="Top" Width="26" FontSize="14" FontWeight="Bold"/>
-        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="338" Margin="23,50,0,0" VerticalAlignment="Top" Width="512" ItemTemplate="{StaticResource lbxTemplate}" SelectionChanged="ListBox_SelectionChanged"/>
 
+        </DataTemplate>
+
+    </Window.Resources>
+
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="421" VerticalAlignment="Top" Width="793" Margin="0,0,0,-0.333">
+            <TabItem Header="TabItem" Margin="-2,-2,-15.333,0">
+                <Grid Background="LightSkyBlue" Margin="-9,-28,-2.333,-4.333">
+                    <TextBlock HorizontalAlignment="Left" Height="26" Margin="259,19,0,0" TextWrapping="Wrap" Text="Wins" VerticalAlignment="Top" Width="38" FontSize="14" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="26" Margin="317,19,0,0" TextWrapping="Wrap" Text="Draws" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="1.649,0.5" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="26" Margin="375,19,0,0" TextWrapping="Wrap" Text="Loses" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="0.965,0.462" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="26" Margin="442,19,0,0" TextWrapping="Wrap" Text="GD" VerticalAlignment="Top" Width="42" FontSize="14" RenderTransformOrigin="1.044,0.538" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="26" Margin="484,19,0,0" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top" Width="51" FontSize="14" RenderTransformOrigin="2.386,1.615" TextDecorations="{x:Null}" FontWeight="Bold" Foreground="Red"/>
+                    <TextBlock HorizontalAlignment="Left" Height="35" Margin="623,10,0,0" TextWrapping="Wrap" Text="Team Info" VerticalAlignment="Top" Width="109" FontSize="22" TextDecorations="Underline"/>
+                    <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,50,0,0" TextWrapping="Wrap" Text="Year Founded:" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,77,0,0" TextWrapping="Wrap" Text="Club Networth:" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="22" Margin="553,104,0,0" TextWrapping="Wrap" Text="Number of Titles:" VerticalAlignment="Top" Width="116" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="22" Margin="555,131,0,0" TextWrapping="Wrap" Text="Current Manager:" VerticalAlignment="Top" Width="102" FontWeight="Bold"/>
+                    <TextBlock x:Name="YearFoundedTBlock" HorizontalAlignment="Left" Height="22" Margin="674,50,0,0" TextWrapping="Wrap" Text="Year Founded" VerticalAlignment="Top" Width="90"/>
+                    <TextBlock x:Name="ClubNetworthTBlock" HorizontalAlignment="Left" Height="22" Margin="674,77,0,0" TextWrapping="Wrap" Text="Networth" VerticalAlignment="Top" Width="90"/>
+                    <TextBlock x:Name="NumTitlesTBlock" HorizontalAlignment="Left" Height="22" Margin="674,104,0,0" TextWrapping="Wrap" Text="Number of Titles" VerticalAlignment="Top" Width="90"/>
+                    <TextBlock x:Name="ManagerTBlock" HorizontalAlignment="Left" Height="40" Margin="674,131,0,0" TextWrapping="Wrap" Text="Manager" VerticalAlignment="Top" Width="109"/>
+                    <TextBlock HorizontalAlignment="Left" Height="35" Margin="608,176,0,0" TextWrapping="Wrap" Text="Add A Result" VerticalAlignment="Top" Width="140" FontSize="22" TextDecorations="Underline"/>
+                    <RadioButton x:Name="WinRButton" Content="Win" HorizontalAlignment="Left" Height="17" Margin="553,216,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
+                    <RadioButton x:Name="DrawRButton" Content="Draw" HorizontalAlignment="Left" Height="17" Margin="553,252,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
+                    <RadioButton x:Name="LossRButton" Content="Loss" HorizontalAlignment="Left" Height="17" Margin="553,292,0,0" VerticalAlignment="Top" Width="89" FontSize="14"/>
+                    <TextBox x:Name="GDTBox" HorizontalAlignment="Left" Height="58" Margin="657,232,0,0" TextWrapping="Wrap" Text="Goal Diffrence +/-" VerticalAlignment="Top" Width="91" FontSize="14"/>
+                    <Button x:Name="AddResultButton" Content="Add Result" HorizontalAlignment="Left" Height="52" Margin="575,336,0,0" VerticalAlignment="Top" Width="189" FontSize="24" FontWeight="Bold" Click="AddResultButton_Click"/>
+                    <TextBlock HorizontalAlignment="Left" Height="26" Margin="211,19,0,0" TextWrapping="Wrap" Text="PL" VerticalAlignment="Top" Width="26" FontSize="14" FontWeight="Bold"/>
+                    <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="338" Margin="23,50,0,0" VerticalAlignment="Top" Width="512" ItemTemplate="{StaticResource lbxTemplate}" SelectionChanged="ListBox_SelectionChanged"/>
+                    <Image Source="/images/premierleague-logo.png" Margin="138,4,601,375"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem" Margin="17,-2,-45,0">
+                <Grid Background="LightSkyBlue" Margin="-9,-28,-2.333,-4.333">
+                    <RadioButton Content="Goals Filter" HorizontalAlignment="Left" Height="21" Margin="170,10,0,0" VerticalAlignment="Top" Width="90"/>
+                    <RadioButton Content="Assists Filter" HorizontalAlignment="Left" Height="21" Margin="265,10,0,0" VerticalAlignment="Top" Width="90"/>
+                    <ListBox HorizontalAlignment="Left" Height="334" Margin="25,65,0,0" VerticalAlignment="Top" Width="465"/>
+                    <TextBlock HorizontalAlignment="Left" Height="17" Margin="25,41,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="64" FontSize="14" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="17" Margin="229,41,0,0" TextWrapping="Wrap" Text="Goals/Assists" VerticalAlignment="Top" Width="97" FontWeight="Bold" FontSize="14"/>
+                    <TextBlock HorizontalAlignment="Left" Height="21" Margin="344,43,0,0" TextWrapping="Wrap" Text="Games Played" VerticalAlignment="Top" Width="105" FontSize="14" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="42" Margin="561,32,0,0" TextWrapping="Wrap" Text="Player Bioagraphy" VerticalAlignment="Top" Width="227" FontSize="22" FontWeight="Bold" TextDecorations="Underline"/>
+                    <Image HorizontalAlignment="Left" Height="203" Margin="517,74,0,0" VerticalAlignment="Top" Width="271"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,275,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,306,0,0" TextWrapping="Wrap" Text="Salary:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,337,0,0" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,368,0,0" TextWrapping="Wrap" Text="Nationality:" VerticalAlignment="Top" Width="110" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="623,275,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="623,368,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="623,306,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="623,337,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

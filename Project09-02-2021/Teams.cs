@@ -21,6 +21,8 @@ namespace Project09_02_2021
         public int Titles { get; set; }
         public string Manager { get; set; }
 
+        public string TeamImage { get; set; }  //manu.png
+
         // Constructors
         public Teams(string name, int played, int wins, int draws, int losses, int goalDifference, int points, int yearFounded, int networth, int titles, string manager)
         {

@@ -76,7 +76,7 @@ namespace Project09_02_2021
             ListBox.ItemsSource = allTeams;
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)  //Update the club details when selection changed
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)  // Update the club details when selection changed
         {
             Teams SelectedTeam = ListBox.SelectedItem as Teams;
 
@@ -88,6 +88,42 @@ namespace Project09_02_2021
                 NumTitlesTBlock.Text = Convert.ToString(SelectedTeam.Titles);
                 ManagerTBlock.Text = SelectedTeam.Manager;
             }
+        }
+
+        private void AddResultButton_Click(object sender, RoutedEventArgs e) // Method for the add button
+        {
+            Teams SelectedTeam = ListBox.SelectedItem as Teams; // Get team selected in listbox
+
+            // Get Team wins draws and losses
+            int teamWins = SelectedTeam.Wins;
+            int teamDraws = SelectedTeam.Draws;
+            int teamLosses = SelectedTeam.Losses;
+
+            int gd = Convert.ToInt32(GDTBox.Text); // Get Input from user for GD
+            int teamGd = Convert.ToInt32(SelectedTeam.GoalDifference); // Get selected teams GD
+            int newGd = teamGd + gd; // Get new GD
+            SelectedTeam.GoalDifference = newGd; // Set new GD for team selected
+
+            if (WinRButton.IsChecked == true)
+            {
+                teamWins = teamWins + 1;
+                SelectedTeam.Wins = teamWins;
+                SelectedTeam.Points += 3;
+            }
+            else if (DrawRButton.IsChecked == true)
+            {
+                teamDraws = teamDraws + 1;
+                SelectedTeam.Draws = teamDraws;
+                SelectedTeam.Points += 1;
+            }
+            else if (LossRButton.IsChecked == true)
+            {
+                teamLosses = teamLosses + 1;
+                SelectedTeam.Losses = teamLosses;
+            }
+
+            ListBox.ItemsSource = null;
+            ListBox.ItemsSource = allTeams;
         }
     }
 }
