@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +22,6 @@ namespace Project09_02_2021
         public int Titles { get; set; }
         public string Manager { get; set; }
 
-        public string TeamImage { get; set; }  //manu.png
-
         // Constructors
         public Teams(string name, int played, int wins, int draws, int losses, int goalDifference, int points, int yearFounded, int networth, int titles, string manager)
         {
@@ -40,6 +39,30 @@ namespace Project09_02_2021
         }
         public Teams()
         {
+
+        }
+
+        public class Player
+        {
+            // Properties for players Table
+            public int PlayerID { get; set; }
+            public string Name { get; set; }        
+            public string Position { get; set; }
+            public int Age { get; set; }
+            public string Nationality { get; set; }
+            public string PlayerImage { get; set; }
+
+            public int Goals { get; set; }
+            public int Assists { get; set; }
+            public int GamesPlayed { get; set; }
+
+            public List<Player> Players { get; set; }
+        }
+        public class PlayerData : DbContext
+        {
+            public PlayerData() : base("PlayerData") { } // Gives DB it's name
+
+            public DbSet<Player> Players { get; set; } // creates players TBL
 
         }
 

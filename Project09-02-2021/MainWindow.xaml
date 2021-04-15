@@ -8,7 +8,7 @@
         Title="Premier League Standings" Height="450" Width="800" Loaded="Window_Loaded">
 
 
-    <Window.Resources>
+    <Window.Resources>  
         <DataTemplate x:Key="lbxTemplate">
 
             <StackPanel Orientation="Horizontal">
@@ -27,7 +27,7 @@
 
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="421" VerticalAlignment="Top" Width="793" Margin="0,0,0,-0.333">
-            <TabItem Header="TabItem" Margin="-2,-2,-15.333,0">
+            <TabItem Header="Table" Margin="-2,-2,-15.333,0">
                 <Grid Background="LightSkyBlue" Margin="-9,-28,-2.333,-4.333">
                     <TextBlock HorizontalAlignment="Left" Height="26" Margin="259,19,0,0" TextWrapping="Wrap" Text="Wins" VerticalAlignment="Top" Width="38" FontSize="14" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="26" Margin="317,19,0,0" TextWrapping="Wrap" Text="Draws" VerticalAlignment="Top" Width="38" FontSize="14" RenderTransformOrigin="1.649,0.5" FontWeight="Bold"/>
@@ -51,10 +51,10 @@
                     <Button x:Name="AddResultButton" Content="Add Result" HorizontalAlignment="Left" Height="52" Margin="575,336,0,0" VerticalAlignment="Top" Width="189" FontSize="24" FontWeight="Bold" Click="AddResultButton_Click"/>
                     <TextBlock HorizontalAlignment="Left" Height="26" Margin="211,19,0,0" TextWrapping="Wrap" Text="PL" VerticalAlignment="Top" Width="26" FontSize="14" FontWeight="Bold"/>
                     <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="338" Margin="23,50,0,0" VerticalAlignment="Top" Width="512" ItemTemplate="{StaticResource lbxTemplate}" SelectionChanged="ListBox_SelectionChanged"/>
-                    <Image Source="/images/premierleague-logo.png" Margin="138,4,601,375"/>
+                    <Image Source="/images/premierleague-logo.png" Margin="167,15,592,375"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem" Margin="17,-2,-45,0">
+            <TabItem Header="Players" Margin="17,-2,-45,0">
                 <Grid Background="LightSkyBlue" Margin="-9,-28,-2.333,-4.333">
                     <RadioButton Content="Goals Filter" HorizontalAlignment="Left" Height="21" Margin="170,10,0,0" VerticalAlignment="Top" Width="90"/>
                     <RadioButton Content="Assists Filter" HorizontalAlignment="Left" Height="21" Margin="265,10,0,0" VerticalAlignment="Top" Width="90"/>
@@ -65,7 +65,7 @@
                     <TextBlock HorizontalAlignment="Left" Height="42" Margin="561,32,0,0" TextWrapping="Wrap" Text="Player Bioagraphy" VerticalAlignment="Top" Width="227" FontSize="22" FontWeight="Bold" TextDecorations="Underline"/>
                     <Image HorizontalAlignment="Left" Height="203" Margin="517,74,0,0" VerticalAlignment="Top" Width="271"/>
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,275,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
-                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,306,0,0" TextWrapping="Wrap" Text="Salary:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,306,0,0" TextWrapping="Wrap" Text="Position:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,337,0,0" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,368,0,0" TextWrapping="Wrap" Text="Nationality:" VerticalAlignment="Top" Width="110" FontSize="18" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="623,275,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
