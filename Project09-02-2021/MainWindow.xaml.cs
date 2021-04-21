@@ -72,8 +72,11 @@ namespace Project09_02_2021
             allTeams.Add(t19);
             allTeams.Add(t20);
 
-            // Display the list inside the ListBox
+            // Display the list inside the ListBox on Teams Tab
             ListBox.ItemsSource = allTeams;
+
+
+
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)  // Update the club details when selection changed
@@ -124,6 +127,11 @@ namespace Project09_02_2021
 
             ListBox.ItemsSource = null;
             ListBox.ItemsSource = allTeams;
+        }
+
+        private void ListBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

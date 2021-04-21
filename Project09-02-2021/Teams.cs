@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project09_02_2021
 {
-    class Teams
+    public class Teams
     {
         // Properties
         public string Name { get; set; }
@@ -42,34 +42,37 @@ namespace Project09_02_2021
 
         }
 
-        public class Player
-        {
-            // Properties for players Table
-            public int PlayerID { get; set; }
-            public string Name { get; set; }        
-            public string Position { get; set; }
-            public int Age { get; set; }
-            public string Nationality { get; set; }
-            public string PlayerImage { get; set; }
-
-            public int Goals { get; set; }
-            public int Assists { get; set; }
-            public int GamesPlayed { get; set; }
-
-            public List<Player> Players { get; set; }
-        }
-        public class PlayerData : DbContext
-        {
-            public PlayerData() : base("PlayerData") { } // Gives DB it's name
-
-            public DbSet<Player> Players { get; set; } // creates players TBL
-
-        }
-
         // ToString method for ListBox
         public override string ToString()
         {
             return string.Format("{0} {1} {2} {3} {4} {5} {6}", Name, Played, Wins, Draws, Losses, GoalDifference, Points);
         }
     }
+
+    public class Player
+    {
+        // Properties for players Table
+        public int PlayerID { get; set; }
+        public string Name { get; set; }
+        public string Position { get; set; }
+        public int Age { get; set; }
+        public string Nationality { get; set; }
+        public string Club { get; set; }
+        public string PlayerImage { get; set; }
+
+        public int Goals { get; set; }
+        public int Assists { get; set; }
+        public int GamesPlayed { get; set; }
+
+        public List<Player> Players { get; set; }
+    }
+    public class PlayerData : DbContext
+    {
+        public PlayerData() : base("PlayerData") { } // Gives DB it's name
+
+        public DbSet<Player> Players { get; set; } // creates players TBL
+
+    }
+
+    
 }

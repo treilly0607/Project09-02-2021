@@ -160,6 +160,18 @@
   <ItemGroup>
     <Resource Include="images\salah.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pogba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\jesus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\son.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
