@@ -65,6 +65,12 @@ namespace Project09_02_2021
         public int GamesPlayed { get; set; }
 
         public List<Player> Players { get; set; }
+
+        // ToString method for ListBox 2
+        public override string ToString()
+        {
+            return string.Format("{0} {1} {2} {3}", Name, Goals, Assists, GamesPlayed);
+        }
     }
     public class PlayerData : DbContext
     {

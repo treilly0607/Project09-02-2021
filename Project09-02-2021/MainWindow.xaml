@@ -27,9 +27,9 @@
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Name}" Margin="5" Width="165"/>
-                <TextBlock Text="{Binding Goals}" Margin="5" Width="50"/>
-                <TextBlock Text="{Binding Assits}" Margin="5"  Width="50"/>
-                <TextBlock Text="{Binding GamesPlayed}" Margin="5" Width="50"/>
+                <TextBlock Text="{Binding Goals}" Margin="5" Width="90"/>
+                <TextBlock Text="{Binding Assists}" Margin="5"  Width="90"/>
+                <TextBlock Text="{Binding GamesPlayed}" Margin="5" Width="90"/>
             </StackPanel>
 
         </DataTemplate>
@@ -69,21 +69,21 @@
                 <Grid Background="LightSkyBlue" Margin="-9,-28,-2.333,-4.333">
                     <RadioButton Content="Goals Filter" HorizontalAlignment="Left" Height="21" Margin="170,10,0,0" VerticalAlignment="Top" Width="90"/>
                     <RadioButton Content="Assists Filter" HorizontalAlignment="Left" Height="21" Margin="265,10,0,0" VerticalAlignment="Top" Width="90"/>
-                    <ListBox x:Name="ListBox2" HorizontalAlignment="Left" Height="334" Margin="25,65,0,0" VerticalAlignment="Top" Width="465" SelectionChanged="ListBox2_SelectionChanged"/>
+                    <ListBox x:Name="ListBox2" HorizontalAlignment="Left" Height="334" Margin="25,65,0,0" VerticalAlignment="Top" Width="465" SelectionChanged="ListBox2_SelectionChanged" ItemTemplate="{StaticResource lbx2Template}"/>
                     <TextBlock HorizontalAlignment="Left" Height="17" Margin="25,41,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="64" FontSize="14" FontWeight="Bold"/>
-                    <TextBlock HorizontalAlignment="Left" Height="17" Margin="242,41,0,0" TextWrapping="Wrap" Text="Assists" VerticalAlignment="Top" Width="97" FontWeight="Bold" FontSize="14"/>
-                    <TextBlock HorizontalAlignment="Left" Height="21" Margin="344,43,0,0" TextWrapping="Wrap" Text="Games Played" VerticalAlignment="Top" Width="105" FontSize="14" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Height="17" Margin="305,43,0,0" TextWrapping="Wrap" Text="Assists" VerticalAlignment="Top" Width="97" FontWeight="Bold" FontSize="14"/>
+                    <TextBlock HorizontalAlignment="Left" Height="21" Margin="385,43,0,0" TextWrapping="Wrap" Text="Games Played" VerticalAlignment="Top" Width="105" FontSize="14" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="42" Margin="561,32,0,0" TextWrapping="Wrap" Text="Player Bioagraphy" VerticalAlignment="Top" Width="227" FontSize="22" FontWeight="Bold" TextDecorations="Underline"/>
-                    <Image x:Name="PlayerImage" HorizontalAlignment="Left" Height="196" Margin="517,74,0,0" VerticalAlignment="Top" Width="271"/>
+                    <Image x:Name="PlayerImage" HorizontalAlignment="Left" Height="196" Margin="527,65,0,0" VerticalAlignment="Top" Width="271"/>
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,275,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,306,0,0" TextWrapping="Wrap" Text="Position:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,337,0,0" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top" Width="76" FontSize="18" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Left" Height="31" Margin="508,368,0,0" TextWrapping="Wrap" Text="Nationality:" VerticalAlignment="Top" Width="110" FontSize="18" FontWeight="Bold"/>
-                    <TextBlock x:Name="PlayerClubTbox" HorizontalAlignment="Left" Height="31" Margin="623,275,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
-                    <TextBlock x:Name="PlayerNationalityTbox" HorizontalAlignment="Left" Height="31" Margin="623,368,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
-                    <TextBlock x:Name="PlayerPositionTbox" HorizontalAlignment="Left" Height="31" Margin="623,306,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
-                    <TextBlock x:Name="PlayerAgeTbox" HorizontalAlignment="Left" Height="31" Margin="623,337,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="76" FontSize="18"/>
-                    <TextBlock HorizontalAlignment="Left" Height="17" Margin="150,41,0,0" TextWrapping="Wrap" Text="Goals" VerticalAlignment="Top" Width="97" FontWeight="Bold" FontSize="14"/>
+                    <TextBlock x:Name="PlayerClubTbox" HorizontalAlignment="Left" Height="31" Margin="623,275,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="165" FontSize="18"/>
+                    <TextBlock x:Name="PlayerNationalityTbox" HorizontalAlignment="Left" Height="31" Margin="623,368,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="165" FontSize="18"/>
+                    <TextBlock x:Name="PlayerPositionTbox" HorizontalAlignment="Left" Height="31" Margin="623,306,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="165" FontSize="18"/>
+                    <TextBlock x:Name="PlayerAgeTbox" HorizontalAlignment="Left" Height="31" Margin="623,337,0,0" TextWrapping="Wrap" Text="Club:" VerticalAlignment="Top" Width="165" FontSize="18"/>
+                    <TextBlock HorizontalAlignment="Left" Height="17" Margin="203,41,0,0" TextWrapping="Wrap" Text="Goals" VerticalAlignment="Top" Width="97" FontWeight="Bold" FontSize="14"/>
 
                 </Grid>
             </TabItem>
