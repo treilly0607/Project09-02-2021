@@ -117,17 +117,20 @@ namespace Project09_02_2021
                 teamWins = teamWins + 1;
                 SelectedTeam.Wins = teamWins;
                 SelectedTeam.Points += 3;
+                SelectedTeam.Played += 1;
             }
             else if (DrawRButton.IsChecked == true)
             {
                 teamDraws = teamDraws + 1;
                 SelectedTeam.Draws = teamDraws;
                 SelectedTeam.Points += 1;
+                SelectedTeam.Played += 1;
             }
             else if (LossRButton.IsChecked == true)
             {
                 teamLosses = teamLosses + 1;
                 SelectedTeam.Losses = teamLosses;
+                SelectedTeam.Played += 1;
             }
 
             ListBox.ItemsSource = null;
@@ -137,7 +140,10 @@ namespace Project09_02_2021
         private void ListBox2_SelectionChanged(object sender, SelectionChangedEventArgs e) // Change Player Biography based on player
         {
             Player SelectedPlayer = ListBox2.SelectedItem as Player;
+
+            // Sort all items added previously.
             
+
             if (SelectedPlayer != null)
             {
                 PlayerImage.Source = new BitmapImage(new Uri(SelectedPlayer.PlayerImage, UriKind.Relative));
@@ -146,30 +152,6 @@ namespace Project09_02_2021
                 PlayerAgeTbox.Text = Convert.ToString(SelectedPlayer.Age);
                 PlayerNationalityTbox.Text = SelectedPlayer.Nationality;
             }
-
-
-            //PlayerData db = new PlayerData();
-
-            // change the Player Biography
-
-            //var query1 = from p in db.Players select p.PlayerImage;
-            //string image = Convert.ToString(query1);
-
-            //PlayerImage.Source = new BitmapImage(new Uri(image, UriKind.Relative));
-
-            //var query2 = from p in db.Players select p.Club; // Change club Tbox
-            //string club = Convert.ToString(query2);
-            //PlayerClubTbox.Text = club;
-
-            //var query3 = from p in db.Players select p.Position; // Change Position Tbox
-            //PlayerPositionTbox.Text = Convert.ToString(query3);
-
-            //var query4 = from p in db.Players select p.Age; // Change Age Tbox
-            //PlayerAgeTbox.Text = Convert.ToString(query4);
-
-            //var query5 = from p in db.Players select p.Nationality; // Change Nationaility Tbox
-            //PlayerNationalityTbox.Text = Convert.ToString(query5);
-
         }
     }
 }
